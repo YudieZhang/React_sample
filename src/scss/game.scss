@@ -1,0 +1,107 @@
+.center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
+.game-box {
+    flex-grow: 1;
+    @extend .center;
+    background: #ffc95c;
+	font-size: 18px;
+    .square-box {
+		margin-top: -10px;
+        padding: 10px;
+        border-radius: 10px;
+        background: #1c1c1c;
+        display: inline-block;
+        .square-row {
+            display: flex;
+            width: 102px;
+        }
+        .red {
+            color: #4ab3ff;
+        }
+        .square:focus {
+            outline: none;
+        }
+        .square {
+            background: #333;
+            border-radius: 50px;
+            border: 1px solid #949494;
+            line-height: 50px;
+            height: 50px;
+            margin: 1px;
+            padding: 0;
+            text-align: center;
+            width: 50px;
+            cursor: pointer;
+            &.active {
+                color: #4ab3ff;
+            }
+        }
+    }
+    .gomoku-box {
+        .player1 {
+            background: #872438;
+        }
+        .player2 {
+            background: #262c78;
+        }
+        .square-row {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+        .player-bar {
+            padding: 40px;
+            @extend .center-center;
+            .active {
+                background: #1c1c1c;
+                color: #fff;
+            }
+            label {
+                @extend .center-center;
+                width: 120px;
+                height: 60px;
+                border-radius: 50px;
+                &:last-child {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .game-box {
+            width: 100%;
+            display: flex;
+        }
+
+        .square-box {
+            flex: 1;
+        }
+
+        .step-box {
+            width: 180px;
+            margin: 0;
+            padding: 0;
+        }
+        .restart {
+            margin-top: 20px;
+            background: #333;
+			color: #fff;
+            height: 30px;
+            width: 100px;
+            border-radius: 50px;
+			outline:none;
+        }
+    }
+}
+
+
+
+
+
+
